@@ -2,11 +2,17 @@ import java.util.ArrayList;
 import java.util.List;
 import com.google.gson.Gson;
 
-public class University{
+public class University implements Comparable<University>{
 
     private String name;
 
     public List<Institute> institutes;
+
+    public University(String name){
+        this.name = name;
+    }
+
+
 
     public University(){
         institutes = new ArrayList<Institute>();
@@ -32,5 +38,11 @@ public class University{
 
     public void addInstitute(Institute i){
         institutes.add(i);
+    }
+
+
+
+    public int compareTo(University o) {
+        return this.name.compareTo(o.name);
     }
 }

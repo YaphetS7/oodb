@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Institute{
+public class Institute implements Comparable<Institute>{
     private String name;
 
     private List<Direction> directions;
@@ -20,5 +20,9 @@ public class Institute{
 
     public void addDirection(Direction d){
         directions.add(d);
+    }
+
+    public int compareTo(Institute o) {
+        return this.name.compareTo(o.name);
     }
 }
