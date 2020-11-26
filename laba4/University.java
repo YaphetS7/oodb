@@ -1,4 +1,4 @@
-public class University implements Comparable<University>{
+public class University {
 
     private int cntOfInstitutes;
     private String name;
@@ -47,19 +47,5 @@ public class University implements Comparable<University>{
 
     public void setDirector(Director director) {
         this.director = director;
-    }
-
-    public int compareTo(University o) {
-        if (o.score < score){
-            return -1;
-        }
-
-        if (o.score > score){
-            return 1;
-        }
-
-        return 0;
-
-
     }
 }
